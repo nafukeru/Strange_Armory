@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "strange_armory",
+  "version": "β1.0.0",
+  "name": "Strange_Armory",
+  "description": "A mod that adds unusual weapons and other things. ",
+  "authors": ["nafukeru"],
+  "contact": {"sources": "https://github.com/nafukeru/Strange_Armory"},
+  "license": "MIT",
+  "icon": "assets/strange_armory/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.strange_armory.client.Strange_armoryClient"
+    ],
+    "main": [
+      "com.strange_armory.Strange_armory"
+    ]
+  },
+  "mixins": [
+    "strange_armory.mixins.json",
+    {
+      "config": "strange_armory.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "fabric": "*",
+    "minecraft": "1.21.4"
+  }
+}
