@@ -1,11 +1,10 @@
 package com.strange_armory;
 
-import com.strange_armory.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Strange_armory implements ModInitializer {
+public class strange_armory implements ModInitializer {
 
     //modidを「strange_armory」にする
     public static final String MOD_ID = "strange_armory";
@@ -16,11 +15,10 @@ public class Strange_armory implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        //マイクラがロードされたときに実行される
-        //初期化がうんちゃらカンチャラ
-        LOGGER.info("debug:\"strange armory mod\" successfully loaded");
 
-        //アイテムのjavaクラスの呼び出し
+        //アイテムのjavaクラスの初期化
+        LOGGER.info("Strange_armory initializing");
         ModItems.registermoditems();
+        ModBlock.registermodblocks();
     }
 }

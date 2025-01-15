@@ -1,3 +1,5 @@
 {
-  "item.strange_armory.imaginary_ingot": "想像インゴット(仮名)"
+  "item_group.strange_armory": "奇妙な武器庫",
+  "item.strange_armory.imaginary_ingot": "精錬された想像石",
+  "item.strange_armory.raw_imaginary":"想像の原石"
 }

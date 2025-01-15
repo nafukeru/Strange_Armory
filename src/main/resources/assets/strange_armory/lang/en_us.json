@@ -1,3 +1,5 @@
 {
-  "item.strange_armory.imaginary_ingot": "Imaginary Ingot"
+  "item_group.strange_armory": "strange armory",
+  "item.strange_armory.imaginary_ingot": "Imaginary Ingot",
+  "item.strange_armory.raw_imaginary":"raw_imaginary"
 }

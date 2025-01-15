@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "strange_armory",
-  "version": "β1.0.0",
+  "version": "1.0.0-beta",
   "name": "Strange_Armory",
   "description": "A mod that adds unusual weapons and other things. ",
   "authors": ["nafukeru"],
@@ -14,7 +14,7 @@
       "com.strange_armory.client.Strange_armoryClient"
     ],
     "main": [
-      "com.strange_armory.Strange_armory"
+      "com.strange_armory.strange_armory"
     ]
   },
   "mixins": [
