@@ -19,6 +19,8 @@ public class Strange_armory implements ModInitializer {
         //マイクラがロードされたときに実行される
         //初期化がうんちゃらカンチャラ
         LOGGER.info("debug:\"strange armory mod\" successfully loaded");
+
+        //アイテムのjavaクラスの呼び出し
         ModItems.registermoditems();
     }
 }
