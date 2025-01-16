@@ -1,17 +1,60 @@
 package com.strange_armory;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-import java.util.function.Function;
 
 public class ModBlock {
-    public static Block register(String name, Function<Block.Settings, Block> factory, Block.Settings settings){
-        final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(strange_armory.MOD_ID,name));
-        return Blocks.register(registryKey,factory, settings);
+
+    //ブロックの追加1
+    public static final RegistryKey<Block> IMAGINARY_BLOCK_KEY = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(strange_armory.MOD_ID,"imaginary_block")
+    );
+
+    //ブロックの追加2
+    public static final Block IMAGINARY_BLOCK = registerblock(
+            new Block(AbstractBlock.Settings.create().registryKey(IMAGINARY_BLOCK_KEY).strength(3.5F,25).sounds(BlockSoundGroup.METAL).requiresTool()),
+            IMAGINARY_BLOCK_KEY,
+            true
+    );
+
+    //ブロックの登録の引数
+    public static Block registerblock(Block block, RegistryKey<Block> blockkey,boolean shouldregisteritem) {
+
+        if(shouldregisteritem) {
+
+            RegistryKey<Item> itemkey = RegistryKey.of(RegistryKeys.ITEM, blockkey.getValue());
+
+            BlockItem blockItem = new BlockItem(block,new Item.Settings().registryKey(itemkey));
+
+            Registry.register(Registries.ITEM, itemkey, blockItem);
+
+        }
+
+        return Registry.register(Registries.BLOCK,blockkey,block);
+
+        }
+
+    //クリエイティブタグにブロックアイテムの追加
+    public static void customIngredients(FabricItemGroupEntries entries) {
+
+        entries.add(IMAGINARY_BLOCK);
+
     }
-    public static void  registermodblocks(){}
+
+    //クラスの初期化
+    public static void registermodblocks() {
+    }
 }
+
+

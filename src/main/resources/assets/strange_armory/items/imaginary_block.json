@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "strange_armory:block/imaginary_block"
+  }
+}
