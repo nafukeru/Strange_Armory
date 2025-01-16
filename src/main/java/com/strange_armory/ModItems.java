@@ -22,6 +22,9 @@ public class ModItems {
     public static final Item RAW_IMAGINARY = registeritem("raw_imaginary",
             Item::new, new Item.Settings());
 
+    public static final Item IMAGINARY_ORB = registeritem("imaginary_orb",
+            Item::new, new Item.Settings());
+
     //アイテムの登録の引数
     public static Item registeritem(String name, Function<Item.Settings, Item> factory, Item.Settings settings){
 
@@ -37,6 +40,8 @@ public class ModItems {
         entries.add(IMAGINARY_INGOT);
 
         entries.add(RAW_IMAGINARY);
+
+        entries.add(IMAGINARY_ORB);
 
     }
 

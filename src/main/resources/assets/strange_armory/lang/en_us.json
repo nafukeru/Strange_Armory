@@ -1,6 +1,7 @@
 {
   "item_group.strange_armory": "strange armory",
   "item.strange_armory.imaginary_ingot": "Imaginary Ingot",
-  "item.strange_armory.raw_imaginary":"raw_imaginary",
+  "item.strange_armory.raw_imaginary":"raw imaginary",
+  "item.strange_armory.imaginary_orb":"imaginary orb",
   "item.strange_armory.imaginary_block": "Imaginary Block"
 }

@@ -1,3 +1,6 @@
 {
-  "values": ["strange_armory:imaginary_block"]
+  "values": [
+    "strange_armory:imaginary_block",
+    "strange_armory:imaginary_orb_table"
+  ]
 }

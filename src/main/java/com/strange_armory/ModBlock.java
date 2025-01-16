@@ -28,6 +28,19 @@ public class ModBlock {
             true
     );
 
+    //ブロックの追加1
+    public static final RegistryKey<Block> IMAGINARY_ORB_TABLE_KET = RegistryKey.of(
+            RegistryKeys.BLOCK,
+            Identifier.of(strange_armory.MOD_ID,"imaginary_orb_table")
+    );
+
+    //ブロックの追加2
+    public static final Block IMAGINARY_ORB_TABLE = registerblock(
+            new imaginary_orb_table(AbstractBlock.Settings.create().registryKey(IMAGINARY_ORB_TABLE_KET).strength(3.5F,25).sounds(BlockSoundGroup.METAL).requiresTool()),
+            IMAGINARY_ORB_TABLE_KET,
+            true
+    );
+
     //ブロックの登録の引数
     public static Block registerblock(Block block, RegistryKey<Block> blockkey,boolean shouldregisteritem) {
 
@@ -49,6 +62,7 @@ public class ModBlock {
     public static void customIngredients(FabricItemGroupEntries entries) {
 
         entries.add(IMAGINARY_BLOCK);
+        entries.add(IMAGINARY_ORB_TABLE);
 
     }
 
